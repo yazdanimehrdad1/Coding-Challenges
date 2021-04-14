@@ -1,8 +1,8 @@
-# Coding-Challenges
+# Coding-Challenge- Option 3
 
 
 
-* Tested with Python 3.9.4 on Windows
+* Tested with Python 3.8.5
 
 * Must install the "requests" pacakge used for making HTTP requests (pip install requests)
 
