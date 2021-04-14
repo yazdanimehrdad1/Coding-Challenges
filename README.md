@@ -10,7 +10,7 @@
 
 * At the top of main.py there is a section to set some parameters. There you can specify a text file for the program to read input batches from, or you can leave it empty to read input from the command line. You can also set the base URL, any header parameters, and the maximum number of concurrent requests. I've set these to the values provided in the description of the question. Please set to appropriate values to test the code.
 
-* If desired to test the code in a localhost, please uncomment # BASE_ITEM_INFO_URL = 'http://localhost:3000/items?id=' in the main.py. Please note that if localhost i preferred, you need to have node. Js installed on the system. Using terminal, go to the directory where “simple-rest-apis-nodejs” exists. Run the server.js in the command line(node server.js) 
+* If desired to test the code in a localhost, please uncomment # BASE_ITEM_INFO_URL = 'http://localhost:3000/items?id=' in the main.py. Please note that if localhost is preferred, you need to have node.js installed on the system. Using terminal, go to the directory where “simple-rest-apis-nodejs” exists. Run the server.js in the command line(node server.js) 
 
 
 * The high level design of the program is that the ItemFetcherUtil class will create worker threads which pick up requests from a concurrent queue to process. The results are placed in a cache (using a dictionary) so that we don't request the same items again. The main method of the utility (lookupItems) returns the results for a batch synchronously. If it's desired for this to be non-blocking we could change it to take a callback provided by the client. 
